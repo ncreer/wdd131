@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #333333;
+    background-color: #ffffff;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, p {
+    margin: 0;
+}
+
+header h1 {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 2rem;
+    color: #333333;
+}
+
+.nav-container {
+    border-top: 2px solid #e5d3b3;
+    border-bottom: 2px solid #e5d3b3;
+    padding: 15px 0;
+    margin-bottom: 30px;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav a {
+    color: #b22222;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.book-meta {
+    text-align: right;
+    font-size: 0.95rem;
+}
+
+.book-meta p {
+    margin-bottom: 8px;
+}
+
+.book-content h2 {
+    color: #b22222;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.book-content img {
+    max-width: 250px;
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px 0;
+    border-top: 2px solid #e5d3b3;
+}
+
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: 200px 1fr;
+        gap: 40px;
+    }
+
+    .book-meta {
+        border-right: 2px solid #e5d3b3;
+        padding-right: 30px;
+    }
+}
