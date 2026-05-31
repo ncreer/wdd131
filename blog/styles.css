@@ -45,9 +45,8 @@ nav a:hover {
 }
 
 .grid-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 30px;
+    display: flex;
+    flex-direction: column;
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;
@@ -75,6 +74,13 @@ nav a:hover {
     margin-bottom: 15px;
 }
 
+.book {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 40px;
+    margin-bottom: 50px; 
+}
+
 footer {
     text-align: center;
     margin-top: 50px;
@@ -83,8 +89,9 @@ footer {
 }
 
 @media (min-width: 768px) {
-    .grid-container {
-        grid-template-columns: 200px 1fr;
+    .grid-container .book{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
         gap: 40px;
     }
 
