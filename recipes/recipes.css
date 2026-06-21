@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+ :root {
+ --primary-color: #1B98E0;
+ --secondary-color: #59c3c3;
+ --text-dark: #333;
+ --text-light: #ebebeb;
+ --primary-font: Arial, Helvetica,sans-serif;
+ --secondary-font: "Amatic SC";
+ }
+
+body {
+    font-family: var(--primary-font);
+}
+#content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px;
+}
+
+h1, h2 {
+    font-family: var(--secondary-font), arial, sans-serif;
+}
+h2{
+    color: var(--primary-color);
+}
+
+img {
+    max-width: 100%;
+}
+hr {
+    width: 100%;
+    margin: 20px 0;
+}
+.desc {
+    display: none;
+}
+
+#page-title {
+    display: flex;
+    justify-content:center;
+    gap:10px;
+    margin-bottom: 50px;
+    align-items: flex-end;
+}
+#page-title img {
+    width: 30%;
+}
+#page-title h1 {
+    font-size: 6em;
+    margin: 0;
+}
+#search {
+    display: flex;
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 10px;
+}
+#search input {
+    width: 100%;
+    font-size: 1.5em;
+    border: none;
+}
+#search img {
+    width: 50px;
+    border-left: 1px solid black;
+    padding-left: 10px;
+}
+.recipe {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 25px;
+}
+.recipe-content button {
+    font-size: 1.5em;
+    padding: 5px;
+}
+.recipe-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 0;
+}
+span {
+    font-size: 1.2em;
+}
+.social img {
+    width: 40px;
+}
+.social {
+    text-align: center;
+   
+}
+footer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
+}
+footer > a {
+    text-align: center;
+}
+
+@media screen and (min-width: 900px){
+    .desc{
+        display: block;
+    }
+    .recipe {
+        flex-direction: row;
+    }
+    .recipe-content {
+        padding: 0 25px;
+    }
+    footer {
+        flex-direction: row-reverse;
+    }
+}
