@@ -1,0 +1,213 @@
+:root {
+    --primary-color: #1B98E0;
+    --text-dark: #333;
+    --profit-positive: #2e7d32;
+    --profit-negative: #c62828;
+    --border-radius: 8px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-dark);
+    margin: 0;
+}
+
+#content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+h2 {
+    color: var(--primary-color);
+}
+
+hr {
+    width: 100%;
+    margin: 30px 0;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+.sourcing-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.sourcing-logos img {
+    height: 40px;
+    width: auto;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+#car-selector {
+    font-size: 1.2em;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--primary-color);
+}
+
+#toggle-add-btn {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.section-header h3 {
+    margin: 0;
+}
+
+#close-add-car {
+    background: none;
+    border: none;
+    font-size: 1.8em;
+    cursor: pointer;
+    color: var(--text-dark);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 2px solid black;
+    padding: 15px;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+}
+
+form > input, .input-symbol {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form > input {
+    font-size: 1.1em;
+    padding: 10px;
+}
+
+.input-symbol {
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+
+.input-symbol span {
+    padding-left: 10px;
+    font-size: 1.1em;
+    color: var(--text-dark);
+}
+
+.input-symbol input {
+    font-size: 1.1em;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    outline: none;
+    background: transparent;
+}
+
+form button {
+    font-size: 1.2em;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#expense-list, #leaderboard-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.expense-item, .leaderboard-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding: 15px 0;
+    font-size: 1.2em;
+}
+
+.leaderboard-item {
+    font-weight: bold;
+}
+
+.summary-box {
+    border: 2px solid black;
+    border-radius: var(--border-radius);
+    padding: 25px;
+    margin-top: 20px;
+    text-align: right;
+    font-size: 1.2em;
+}
+
+.profit-good { color: var(--profit-positive); }
+.profit-bad { color: var(--profit-negative); }
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+}
+
+@media screen and (min-width: 900px) {
+    #content {
+        padding: 60px;
+    }
+    
+    #new-car-form {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    #new-car-form > input, #new-car-form > .input-symbol {
+        flex: 1 1 30%;
+    }
+    
+    #new-car-form button {
+        flex: 1 1 100%;
+    }
+
+    #expense-form {
+        flex-direction: row;
+    }
+    
+    #expense-form > input, #expense-form > .input-symbol {
+        width: 100%;
+    }
+    
+    #expense-form button {
+        width: 30%;
+    }
+}

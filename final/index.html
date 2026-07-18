@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salvage Flip Tracker</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="main.js" defer type="module"></script>
+</head>
+<body>
+    <div id="content">
+        <header>
+            <h1>Flip Tracker</h1>
+            
+            <div class="sourcing-logos">
+                <img src="./images/copart-logo.png" alt="Copart Logo">
+                <img src="./images/marketplace-logo.png" alt="Facebook Marketplace Logo">
+            </div>
+
+            <div class="controls">
+                <select id="car-selector"></select>
+                <button id="toggle-add-btn">Add New Project</button>
+            </div>
+            
+            <h2 id="car-title">Select a Car</h2>
+        </header>
+        <hr>
+        <main>
+            <section class="add-car-section hidden">
+                <div class="section-header">
+                    <h3>Start a New Project</h3>
+                    <button id="close-add-car">&times;</button>
+                </div>
+                <form id="new-car-form">
+                    <input type="number" id="car-year" placeholder="Year" required>
+                    <input type="text" id="car-make" placeholder="Make" required>
+                    <input type="text" id="car-model" placeholder="Model" required>
+                    
+                    <div class="input-symbol">
+                        <span>$</span>
+                        <input type="number" id="car-base" placeholder="Base Cost" min="0" step="0.01" required>
+                    </div>
+                    
+                    <div class="input-symbol">
+                        <span>$</span>
+                        <input type="number" id="car-target" placeholder="Target Sale" min="0" step="0.01" required>
+                    </div>
+                    
+                    <button type="submit">Create Car</button>
+                </form>
+            </section>
+            
+            <section class="tracker-inputs">
+                <h3>Add Parts & Repairs</h3>
+                <form id="expense-form">
+                    <input type="text" id="item-name" placeholder="Part (e.g. Carrier Bearing)" required>
+                    
+                    <div class="input-symbol">
+                        <span>$</span>
+                        <input type="number" id="item-cost" placeholder="Cost" min="0" step="0.01" required>
+                    </div>
+                    
+                    <button type="submit">Add Expense</button>
+                </form>
+            </section>
+            
+            <section class="expense-container">
+                <ul id="expense-list"></ul>
+            </section>
+
+            <section class="summary-box">
+                <div class="totals">
+                    <p>Base Cost: $<span id="base-cost">0.00</span></p>
+                    <p>Target Sale: $<span id="target-sale">0.00</span></p>
+                    <hr>
+                    <p>Total Investment: $<span id="total-investment">0.00</span></p>
+                    <h2 id="projected-profit">Expected Profit: $0.00</h2>
+                </div>
+            </section>
+
+            <hr>
+
+            <section class="leaderboard-section">
+                <h3>Project Leaderboard</h3>
+                <ul id="leaderboard-list"></ul>
+            </section>
+        </main>
+        <footer>
+            <p>WDD 131 Final Project</p>
+        </footer>
+    </div>
+</body>
+</html>
