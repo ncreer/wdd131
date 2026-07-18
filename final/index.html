@@ -18,7 +18,7 @@
             </div>
 
             <div class="controls">
-                <select id="car-selector"></select>
+                <select id="car-selector" aria-label="Select a saved project car"></select>
                 <button id="toggle-add-btn">Add New Project</button>
             </div>
             
@@ -29,21 +29,21 @@
             <section class="add-car-section hidden">
                 <div class="section-header">
                     <h3>Start a New Project</h3>
-                    <button id="close-add-car">&times;</button>
+                    <button id="close-add-car" aria-label="Close project creation form">&times;</button>
                 </div>
                 <form id="new-car-form">
-                    <input type="number" id="car-year" placeholder="Year" required>
-                    <input type="text" id="car-make" placeholder="Make" required>
-                    <input type="text" id="car-model" placeholder="Model" required>
+                    <input type="number" id="car-year" placeholder="Year" aria-label="Vehicle Year" required>
+                    <input type="text" id="car-make" placeholder="Make" aria-label="Vehicle Make" required>
+                    <input type="text" id="car-model" placeholder="Model" aria-label="Vehicle Model" required>
                     
                     <div class="input-symbol">
-                        <span>$</span>
-                        <input type="number" id="car-base" placeholder="Base Cost" min="0" step="0.01" required>
+                        <span aria-hidden="true">$</span>
+                        <input type="number" id="car-base" placeholder="Base Cost" aria-label="Base Cost" min="0" step="0.01" required>
                     </div>
                     
                     <div class="input-symbol">
-                        <span>$</span>
-                        <input type="number" id="car-target" placeholder="Target Sale" min="0" step="0.01" required>
+                        <span aria-hidden="true">$</span>
+                        <input type="number" id="car-target" placeholder="Target Sale" aria-label="Target Sale Price" min="0" step="0.01" required>
                     </div>
                     
                     <button type="submit">Create Car</button>
@@ -53,11 +53,11 @@
             <section class="tracker-inputs">
                 <h3>Add Parts & Repairs</h3>
                 <form id="expense-form">
-                    <input type="text" id="item-name" placeholder="Part (e.g. Carrier Bearing)" required>
+                    <input type="text" id="item-name" placeholder="Part (e.g. Carrier Bearing)" aria-label="Part or Repair Name" required>
                     
                     <div class="input-symbol">
-                        <span>$</span>
-                        <input type="number" id="item-cost" placeholder="Cost" min="0" step="0.01" required>
+                        <span aria-hidden="true">$</span>
+                        <input type="number" id="item-cost" placeholder="Cost" aria-label="Part Cost" min="0" step="0.01" required>
                     </div>
                     
                     <button type="submit">Add Expense</button>
@@ -65,7 +65,7 @@
             </section>
             
             <section class="expense-container">
-                <ul id="expense-list"></ul>
+                <ul id="expense-list" aria-label="List of added expenses"></ul>
             </section>
 
             <section class="summary-box">
@@ -82,7 +82,7 @@
 
             <section class="leaderboard-section">
                 <h3>Project Leaderboard</h3>
-                <ul id="leaderboard-list"></ul>
+                <ul id="leaderboard-list" aria-label="Ranked list of projects by profit"></ul>
             </section>
         </main>
         <footer>
